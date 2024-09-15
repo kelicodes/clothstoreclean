@@ -5,14 +5,14 @@ import cross from '../../Admin_Assets/cross_icon.png'
 const Listproduct = () => {
   const [allproducts , setAllproducts]= useState([]);
   const fetchinfo = async ()=>{
-    await fetch('http://localhost:4000/allproducts').then((res)=>res.json())
+    await fetch('https://clothstoreclean-backend.onrender.com/allproducts').then((res)=>res.json())
     .then((data)=>{setAllproducts(data)})
   }
   useEffect(()=>{
     fetchinfo();
   },[])
   const removeproduct = async (id)=>{
-    await fetch('http://localhost:4000/removeproduct',{
+    await fetch('https://clothstoreclean-backend.onrender.com/removeproduct',{
       method:"POST",
       headers:{
         Accept:"application/json",
