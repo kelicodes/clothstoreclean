@@ -1,0 +1,179 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    align-items: center;
+    width: 100%;
+}
+
+.navlogo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navlogo p{
+    color:#171717 ;
+    font-size:36px ;
+    font-weight: 600;
+}
+
+.navmenu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navmenu li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.navmenu hr{
+    border: none;
+    width: 80%;
+    height:3px ;
+    border-radius: 10px;
+    background: #ff4141;
+}
+
+.logincart{
+    display: flex;
+    gap: 46px;
+    align-items: center;
+}
+.logincart button{
+    width: 157px;
+    height:58px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    background: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+.logincart button:active{
+    background: #f3f3f3;
+}
+.logincartcount{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:-35px ;
+    margin-left: -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+}
+.navdropdown{
+    display: none;
+}
+@media(max-width:1280px){
+    .navbar{
+        padding: 12px 50px;
+    }
+
+    .navlogo img{
+        width: 40px;
+    }
+
+    .navlogo p{
+        font-size: 25px;
+    }
+    .navmenu{
+        gap: 30px;
+        font-size: 16px;
+    }
+    .logincart{
+        gap: 30px;
+    }
+    .logincart button{
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .logincartcount{
+        margin-left: -40px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:1024px){
+    .navbar{
+        padding: 12px 30px;
+    }
+    .navmenu{
+        gap: 25px;
+        font-size: 14px;
+    }
+    .logincart button{
+        height:35px ;
+        width: 80px;
+        font-size: 14px;
+    }
+    .logincart img{
+        width: 30px;
+    }
+    .logincartcount{
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media(max-width:800px){
+    .navbar{
+        padding: 10px 0px;
+    }
+    .navdropdown{
+        display: block;
+        width: 15px;
+        rotate: -90deg;
+        transition: 0.5s;
+    }
+    .navmenu{
+        display: none;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        background: white;
+        justify-content: center;
+        top: 50px;
+    }
+    .navmenuvisible{
+        display: flex;
+    }
+    .navdropdown.open{
+        transform: rotate(90deg);
+    }
+}
+
+@media(max_width:500px){
+    .navbar{
+        padding: 8px 0px;
+        gap: 0;
+    }
+    .navlogo{
+        transform: scale(0.8);
+    }
+    .navmenu{
+        height: 70px;
+        top: 50px;
+    }
+    .logincart{
+        transform: scale(0.8);
+    }
+}
