@@ -13,7 +13,7 @@ const getDefaultCart = () =>{
 
 const ShopContextProvider = (props) =>{
 
-    const url = "http://localhost:4000/"
+    const url = "https://clothstoreclean-backend.onrender.com/"
     const [allproduct, setAllproduct]= useState([])
     const [cartitems, setCartitems] = useState(getDefaultCart());
     useEffect(()=>{
